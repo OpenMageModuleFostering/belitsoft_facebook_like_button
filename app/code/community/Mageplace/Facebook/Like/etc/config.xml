@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Mageplace Facebook "Like" Button
+ *
+ * @category	Mageplace_Facebook
+ * @package		Mageplace_Facebook_Like
+ * @copyright	Copyright (c) 2011 Mageplace. (http://www.mageplace.com)
+ * @license		http://www.mageplace.com/disclaimer.html
+ */
+-->
+<config>
+	<modules>
+		<Mageplace_Facebook_Like>
+			<version>2.3.2</version>
+		</Mageplace_Facebook_Like>
+	</modules>
+	<global>
+		<blocks>
+			<facebookilike>
+				<class>Mageplace_Facebook_Like_Block</class>
+			</facebookilike>
+		</blocks>
+		<models>
+			<facebookcore>
+				<class>Mageplace_Facebook_Core_Model</class>
+			</facebookcore>
+			<facebookilike>
+				<class>Mageplace_Facebook_Like_Model</class>
+			</facebookilike>
+		</models>
+		<helpers>
+			<facebookilike>
+				<class>Mageplace_Facebook_Like_Helper</class>
+			</facebookilike>
+		</helpers>
+		<events>
+			<core_block_abstract_to_html_after>
+				<observers>
+					<facebookilike>
+						<class>facebookilike/observer</class>
+						<method>processCoreBlockAbstractToHtmlAfter</method>
+					</facebookilike>
+				</observers>
+			</core_block_abstract_to_html_after>
+			<core_block_abstract_to_html_before>
+				<observers>
+					<facebookilike>
+						<class>facebookilike/observer</class>
+						<method>processCoreBlockAbstractToHtmlBefore</method>
+					</facebookilike>
+				</observers>
+			</core_block_abstract_to_html_before>
+		</events>
+	</global>
+
+	<adminhtml>
+		<translate>
+			<modules>
+				<Mageplace_Facebook_Like>
+					<files>
+						<default>Mageplace_Facebookilike.csv</default>
+					</files>
+				</Mageplace_Facebook_Like>
+			</modules>
+		</translate>
+
+		<acl>
+			<resources>
+				<admin>
+					<children>
+						<system>
+							<children>
+								<config>
+									<children>
+										<facebookilike translate="title" module="facebookilike">
+											<title>Facebook "Like" Button</title>
+											<sort_order>100</sort_order>
+										</facebookilike>
+									</children>
+								</config>
+							</children>
+						</system>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+	</adminhtml>
+	
+	<frontend>
+		<layout>
+			<updates>
+				<facebookilike>
+					<file>facebookilike.xml</file>
+				</facebookilike>
+			</updates>
+		</layout>
+	</frontend>
+
+	<default>
+		<facebookilike>
+			<general>
+				<plugin_code>html5</plugin_code>
+				<layout>standard</layout>
+				<action>like</action>
+				<colorscheme>light</colorscheme>
+				<width>450</width>
+				<height>21</height>
+				<language>en_US</language>
+			</general>
+			<content>
+				<show_in_cms>0</show_in_cms>
+				<show_in_home>0</show_in_home>
+				<show_in_category>0</show_in_category>
+				<show_in_product>0</show_in_product>
+				<show_custom>0</show_custom>
+				<show_widget>0</show_widget>
+			</content>
+		</facebookilike>
+	</default>
+</config>

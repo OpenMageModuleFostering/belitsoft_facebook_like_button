@@ -1,0 +1,15 @@
+<?php
+/**
+ * Mageplace Facebook "Like" Button
+ *
+ * @category	Mageplace_Facebook
+ * @package		Mageplace_Facebook_Like
+ * @copyright	Copyright (c) 2011 Mageplace. (http://www.mageplace.com)
+ * @license		http://www.mageplace.com/disclaimer.html
+ */
+
+$meta_tags_params = $this->getMetaTagsParams();
+?>
+<?php foreach($meta_tags_params as $property=>$content): ?>
+<meta property="<?php echo $property; ?>" content="<?php echo $content; ?>" />
+<?php endforeach; ?>

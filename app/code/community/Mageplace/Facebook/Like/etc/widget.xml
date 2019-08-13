@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Mageplace Facebook "Like" Button
+ *
+ * @category	Mageplace_Facebook
+ * @package		Mageplace_Facebook_Like
+ * @copyright	Copyright (c) 2011 Mageplace. (http://www.mageplace.com)
+ * @license		http://www.mageplace.com/disclaimer.html
+ */
+-->
+<widgets>
+	<facebookilike_button type="facebookilike/widget_facebookilike" translate="name" module="facebookilike">
+		<name>Facebook "Like" Button</name>
+		<parameters>
+			<template translate="label">
+				<label>Frontend Template</label>
+				<visible>1</visible>
+				<required>1</required>
+				<type>text</type>
+				<value>facebookilike/widget/facebookilike.phtml</value> 
+			</template>
+		</parameters>
+	</facebookilike_button>
+</widgets>
