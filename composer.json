@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Belitsoft_Facebook_Like_Button",
+    "name": "OpenMageModuleFostering\/Belitsoft_Facebook_Like_Button",
     "type": "magento-module",
     "license": "GNU-GPLv2",
     "homepage": "",
     "description": "Facebook  Like  Button",
     "authors": [
-    {
-        "name": "Belitsoft",
-        "email": "vtursin@belitsoft.com"
-    }
-],
+        {
+            "name": "Belitsoft",
+            "email": "vtursin@belitsoft.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
